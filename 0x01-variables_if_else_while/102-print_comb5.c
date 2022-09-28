@@ -1,29 +1,46 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - prints all possible combinations of 3 numbers
- * Return: 0 (Success)
- */
+  * main - Prints 3 combination of numbers
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	int num1, num2, num3;
+	int c, i, k, j;
 
-	for (num1 = 0; num1 < 8; num1++)
+	for (c = 48; c <= 57; c++)
 	{
-		for (num2 = num1 + 1; num2 < 9; num2++)
+		for (i = 48; i <= 57; i++)
 		{
-			for (num3 = num2 + 1; num3 < 10; num3++)
+			for (k = 48; k <= 57; k++)
 			{
-				putchar((num1 % 10) + '0');
-				putchar((num2 % 10) + '0');
-				putchar((num3 % 10) + '0');
-				if (num1 == 7 && num2 == 8 && num3 == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
+				for (j = 48; j <= 57; j++)
+				{
+					if (((k + j) > (c + i) &&  k >= c) || c < k)
+					{
+						putchar(c);
+						putchar(i);
+						putchar(' ');
+						putchar(k);
+						putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
+					{
+					break;
+					}
+					else
+					{
+					putchar(',');
+					putchar(' ');
+					}
+					}
+				}
 			}
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
