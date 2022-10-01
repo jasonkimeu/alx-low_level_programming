@@ -1,16 +1,15 @@
+#include "main.h"
 /**
- * _strlen - fn to get length of string
- * @s: string parameter
- * Return: integer is returned
+ *_strlen - returns the length of a string
+ * @s: string
+ *Return: returns lenght;
  */
 int _strlen(char *s)
 {
-	int len = 0;
-	int i = 0;
+int count, inc;
+inc = 0;
+for (count = 0; s[count] != '\0'; count++)
+inc++;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		len = i + 1;
-	}
-	return (len);
+return (inc);
 }

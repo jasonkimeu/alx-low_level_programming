@@ -1,19 +1,15 @@
 #include "main.h"
-
 /**
- * _abs - fn to print abs numbers
- * @num: parameter
- * Return: absolute number
- */
-int _abs(int num)
+* _abs - prints the absolute value of a number
+*@i: number targeted
+*Return: returns 0
+*/
+int _abs(int i)
 {
-	if (num < 0)
-	{
-		return (-(num));
-	}
-	else
-	{
-		return (num);
-	}
-	_putchar('\n');
+if (i > 0)
+return (i);
+else if (i < 0)
+return (-i);
+else
+return (0);
 }
